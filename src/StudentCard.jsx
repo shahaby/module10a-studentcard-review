@@ -1,13 +1,25 @@
+/*
+ This react component constructs a student card that displays name, major, year, bio, and image
+ It uses props pass data to the component from outside
+ It uses useState hooks for a button to toggle the visibility of the student's bio on or off
+ */
+
 import React from "react";
 
 function StudentCard(props) {
+  // Destructure props and storing individual properties in variables
   const { name, major, year, bio, imageUrl } = props;
+
+  // useState hook to manage the visibility of bio
+  // showBio is a boolean: determines if bio is shown or not
+  // setShowBio is the function: updates showBio state
   const [showBio, setShowBio] = React.useState(false);
 
+  // Func to toggle on/off showBio state
   const toggleBio = () => {
+    // Updates showBio to opposite of current value
     setShowBio(!showBio);
   };
-
   return (
     <div
       style={{
@@ -38,7 +50,10 @@ function StudentCard(props) {
         {major} – {year}
       </p>
       <button
-        onClick={toggleBio}
+        onClick={
+          // Call toggleBio func when button clicked
+          toggleBio
+        }
         style={{
           marginTop: "12px",
           padding: "8px 16px",
@@ -50,11 +65,16 @@ function StudentCard(props) {
           color: "white",
         }}
       >
-        {showBio ? "Hide Bio" : "Show Bio"}
+        {
+          // Change button text according to showBio state
+          showBio ? "Hide Bio" : "Show Bio"
+        }
       </button>
-      {showBio && <p style={{ marginTop: "16px", fontSize: "14px" }}>{bio}</p>}
+      {
+        // Show bio only if showBio is true
+        showBio && <p style={{ marginTop: "16px", fontSize: "14px" }}>{bio}</p>
+      }
     </div>
   );
 }
-
 export default StudentCard;
