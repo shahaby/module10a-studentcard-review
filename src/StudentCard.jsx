@@ -1,3 +1,5 @@
+import React from "react";
+
 function StudentCard(props) {
   const { name, major, year, bio, imageUrl } = props;
   const [showBio, setShowBio] = React.useState(false);
