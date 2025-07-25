@@ -3,7 +3,9 @@
 ## Description
 
 This is a React code review assignment. I reviewed the StudentCard component and added comments to
-explain the logic behind props, state, and interactivity.
+explain the logic behind props, state, and interactivity. I noticed there was an error in the code
+and upon further investivation realized the React library was not imported inside the component JSX
+file.
 
 ## What I Learned
 
