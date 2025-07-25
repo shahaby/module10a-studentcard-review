@@ -4,7 +4,7 @@
 
 This is a React code review assignment. I reviewed the StudentCard component and added comments to
 explain the logic behind props, state, and interactivity. I noticed there was an error in the code
-and upon further investivation realized the React library was not imported inside the component JSX
+and, upon further investigation, realized the React library was not imported inside the component JSX
 file.
 
 ## What I Learned
@@ -14,5 +14,4 @@ file.
 - How to better document and explain React components
 
 ## Screenshot
-
-(Add a screenshot of the running component with your comments visible in the code editor)
+<img width="1356" height="945" alt="Screenshot 2025-07-25 at 12 59 27 PM" src="https://github.com/user-attachments/assets/826b69c6-6f40-483c-9f1d-f681d32666e6" />
